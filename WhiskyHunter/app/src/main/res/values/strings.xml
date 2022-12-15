@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">WhiskyHunter</string>
+    <string name="align_left">Align left</string>
+    <string name="align_right">Align right</string>
+    <string name="align_center">Align center</string>
+    <string name="mixed">Mixed</string>
+    <string name="country_name">Enter the name of a country</string>
+    <string name="search">Search</string>
+</resources>
