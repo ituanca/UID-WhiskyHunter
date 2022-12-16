@@ -21,4 +21,10 @@
         android:layout_marginHorizontal="20dp"
         android:text="@string/search"
         android:id="@+id/search"/>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/distilleries_info_list"/>
 </LinearLayout>
