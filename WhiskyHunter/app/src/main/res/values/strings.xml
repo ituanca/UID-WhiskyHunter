@@ -6,4 +6,9 @@
     <string name="mixed">Mixed</string>
     <string name="country_name">Enter the name of a country:</string>
     <string name="search">Search</string>
+    <string name="distilleries_info_item_country">"country: "</string>
+    <string name="distilleries_info_item_whiskybase_whiskies">"whiskybase whiskies: "</string>
+    <string name="distilleries_info_item_whiskybase_votes">"whiskybase votes: "</string>
+    <string name="distilleries_info_item_whiskybase_rating">"whiskybase rating: "</string>
+    <string name="empty_country_name">enter the name of a country</string>
 </resources>
