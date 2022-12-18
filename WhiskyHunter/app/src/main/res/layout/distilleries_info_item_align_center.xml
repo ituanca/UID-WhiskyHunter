@@ -10,14 +10,14 @@
         android:textSize="20sp"
         android:textColor="@color/black"
         android:textStyle="bold"
-        android:gravity="center_vertical|end"
+        android:gravity="center_horizontal"
         android:id="@+id/distilleries_info_item_name"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:gravity="center_vertical|end">
+        android:gravity="center_horizontal">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -83,5 +83,6 @@
                 android:textSize="15sp"
                 android:id="@+id/distilleries_info_item_whiskybase_rating"/>
         </LinearLayout>
+
     </LinearLayout>
 </LinearLayout>

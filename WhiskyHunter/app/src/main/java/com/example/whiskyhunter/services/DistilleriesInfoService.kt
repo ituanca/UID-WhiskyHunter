@@ -3,6 +3,7 @@ package com.example.whiskyhunter.services
 import com.example.whiskyhunter.models.DistilleriesInfo
 
 class DistilleriesInfoService {
+
     fun getDistilleriesInfoList(list: List<DistilleriesInfo>?): ArrayList<DistilleriesInfo>{
         val distilleriesInfoArrayList = ArrayList<DistilleriesInfo>();
         if (list != null) {

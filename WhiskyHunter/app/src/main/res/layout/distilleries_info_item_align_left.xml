@@ -2,7 +2,7 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical">
     <TextView
         android:layout_width="match_parent"
@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginStart="20dp">
+        android:gravity="center_vertical|start">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -30,7 +30,6 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/white"
                 android:textSize="15sp"
                 android:id="@+id/distilleries_info_item_country"/>
         </LinearLayout>
@@ -47,7 +46,6 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/white"
                 android:textSize="15sp"
                 android:id="@+id/distilleries_info_item_whiskybase_whiskies"/>
         </LinearLayout>
@@ -64,7 +62,6 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/white"
                 android:textSize="15sp"
                 android:id="@+id/distilleries_info_item_whiskybase_votes"/>
         </LinearLayout>
@@ -73,6 +70,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="20dp"
             android:orientation="horizontal">
             <TextView
                 android:layout_width="match_parent"
@@ -81,7 +79,6 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/white"
                 android:textSize="15sp"
                 android:id="@+id/distilleries_info_item_whiskybase_rating"/>
         </LinearLayout>
