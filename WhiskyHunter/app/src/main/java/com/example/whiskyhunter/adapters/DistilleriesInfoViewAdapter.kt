@@ -2,6 +2,7 @@ package com.example.whiskyhunter.adapters
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -26,22 +27,32 @@ class DistilleriesInfoViewAdapter(
     }
 
     override fun onBindViewHolder(holder: DistilleriesInfoViewHolder, position: Int) {
-        holder.bindData(dataSource[position])
+        val item = dataSource[position]
+        holder.bindData(item)
     }
 
     override fun getItemViewType(position: Int): Int {
-        return when (designType) {
+        when (designType) {
             DistilleriesInfoItemDesign.ALIGN_LEFT -> {
-                R.layout.distilleries_info_item_align_left
+                return R.layout.distilleries_info_item_align_left
             }
             DistilleriesInfoItemDesign.ALIGN_RIGHT -> {
-                R.layout.distilleries_info_item_align_right
+                return R.layout.distilleries_info_item_align_right
             }
             DistilleriesInfoItemDesign.ALIGN_CENTER -> {
-                R.layout.distilleries_info_item_align_center
+                return R.layout.distilleries_info_item_align_center
             }
-            else -> {
-                R.layout.distilleries_info_item_align_left
+            DistilleriesInfoItemDesign.ALIGN_MIXED -> {
+                return if(position % 3 == 0){
+                    R.layout.distilleries_info_item_align_left
+                }else if (position % 3 == 1){
+                    R.layout.distilleries_info_item_align_right
+                }else{
+                    R.layout.distilleries_info_item_align_center
+                }
+            }
+            else ->{
+                return R.layout.distilleries_info_item_align_left
             }
         }
     }
@@ -50,10 +61,11 @@ class DistilleriesInfoViewAdapter(
         return dataSource.size
     }
 
-    @SuppressLint("NotifyDataSetChanged")
-    fun addItem(distilleriesInfo: DistilleriesInfo) {
-        dataSource.add(0,distilleriesInfo)
+//    @SuppressLint("NotifyDataSetChanged")
+    fun addItemAtTheBeginning(item: DistilleriesInfo) {
+        dataSource.add(0, item)
         notifyDataSetChanged()
+        Log.e("list", dataSource.toString())
     }
 
     @SuppressLint("NotifyDataSetChanged")

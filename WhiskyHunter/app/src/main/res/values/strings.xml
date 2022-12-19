@@ -11,4 +11,17 @@
     <string name="distilleries_info_item_whiskybase_votes">"whiskybase votes: "</string>
     <string name="distilleries_info_item_whiskybase_rating">"whiskybase rating: "</string>
     <string name="empty_country_name">enter the name of a country</string>
+    <string name="insert_at_the_beginning">Insert at the beginning</string>
+    <string name="insert_at_the_end">Insert at the end</string>
+    <string name="distilleries_info_item_name">"name: "</string>
+    <string name="add_item">Add a new distillery at the beginning of the list</string>
+    <string name="add_at_beginning">Add to list</string>
+    <string name="empty_name">name cannot be empty</string>
+    <string name="empty_country">country cannot be empty</string>
+    <string name="empty_whiskybase_whiskies">whiskybase whiskies cannot be empty</string>
+    <string name="empty_whiskybase_votes">whiskybase votes cannot be empty</string>
+    <string name="empty_whiskybase_rating">whiskybase rating cannot be empty</string>
+    <string name="invalid_whiskybase_whiskies">invalid number of whiskies</string>
+    <string name="invalid_whiskybase_votes">invalid number of votes</string>
+    <string name="invalid_whiskybase_rating">invalid rating</string>
 </resources>

@@ -36,10 +36,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                     DistilleriesInfoSingleton.token = ""
                     Log.e("SUCCESSFUL", response.body().toString())
                     if(response.isSuccessful){
-//                        val listView = findViewById<ListView>(R.id.distilleries_info_list)
                         distilleriesInfoArrayList = DistilleriesInfoService().getDistilleriesInfoList(response.body())
-//                        adapter = DistilleriesInfoAdapter(this@MainActivity, R.layout.distilleries_info_item_align_left, distilleriesInfoArrayList)
-//                        listView.adapter = adapter
                         adapter = DistilleriesInfoViewAdapter(this@MainActivity, distilleriesInfoArrayList)
                         val recyclerView = findViewById<RecyclerView>(R.id.distilleries_info_list_recycler_view)
                         recyclerView.layoutManager = LinearLayoutManager(this@MainActivity)
@@ -82,24 +79,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(p0: View?) {
-//        val countryName = findViewById<EditText>(R.id.country_name).text.toString()
-//        val localDistilleriesInfoArrayList = distilleriesInfoArrayList
-//        val listView = findViewById<ListView>(R.id.distilleries_info_list)
-//        adapter = if(countryName.isEmpty()){
-//            DistilleriesInfoAdapter(this@MainActivity, R.layout.distilleries_info_item_align_left, localDistilleriesInfoArrayList)
-//        }else{
-//            val distilleriesInfoArrayListByCountry = DistilleriesInfoService().getDistilleriesInfoListByCountry(localDistilleriesInfoArrayList, countryName)
-//            DistilleriesInfoAdapter(this@MainActivity, R.layout.distilleries_info_item_align_left, distilleriesInfoArrayListByCountry)
-//        }
-//        listView.adapter = adapter
-
         val countryName = findViewById<EditText>(R.id.country_name).text.toString()
-        val localDistilleriesInfoArrayList = distilleriesInfoArrayList
         val recyclerView = findViewById<RecyclerView>(R.id.distilleries_info_list_recycler_view)
         adapter = if(countryName.isEmpty()){
-            DistilleriesInfoViewAdapter(this@MainActivity, localDistilleriesInfoArrayList)
+            DistilleriesInfoViewAdapter(this@MainActivity, distilleriesInfoArrayList)
         }else{
-            val distilleriesInfoArrayListByCountry = DistilleriesInfoService().getDistilleriesInfoListByCountry(localDistilleriesInfoArrayList, countryName)
+            val distilleriesInfoArrayListByCountry =
+                DistilleriesInfoService().getDistilleriesInfoListByCountry(distilleriesInfoArrayList, countryName)
             DistilleriesInfoViewAdapter(this@MainActivity, distilleriesInfoArrayListByCountry)
         }
         recyclerView.adapter = adapter

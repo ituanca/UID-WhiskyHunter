@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/insert_at_the_beginning"
+        android:title="@string/insert_at_the_beginning" />
+    <item
+        android:id="@+id/insert_at_the_end"
+        android:title="@string/insert_at_the_end" />
+</menu>

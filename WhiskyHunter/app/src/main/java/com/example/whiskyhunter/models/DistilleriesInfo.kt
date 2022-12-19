@@ -1,10 +1,10 @@
 package com.example.whiskyhunter.models
 
 data class DistilleriesInfo(
-    val name: String,
+    var name: String,
     val slug: String,
-    val country: String,
-    val whiskybase_whiskies: String,
-    val whiskybase_votes: String,
-    val whiskybase_rating: String
-)
+    var country: String,
+    var whiskybase_whiskies: String,
+    var whiskybase_votes: String,
+    var whiskybase_rating: String
+):java.io.Serializable{}
