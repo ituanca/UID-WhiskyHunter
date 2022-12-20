@@ -1,5 +1,6 @@
 package com.example.whiskyhunter
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -89,6 +90,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             DistilleriesInfoViewAdapter(this@MainActivity, distilleriesInfoArrayListByCountry)
         }
         recyclerView.adapter = adapter
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        if (requestCode == 0) {
+            adapter.onActivityResult(requestCode, resultCode, data)
+        }
+        super.onActivityResult(requestCode, resultCode, data)
     }
 
 }
