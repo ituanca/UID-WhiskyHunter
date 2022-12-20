@@ -8,4 +8,16 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="red">#EA0909</color>
+
+    #light
+    <color name="pink_light">#EFB3B8</color>
+    <color name="purple_light">#CABDE8</color>
+    <color name="blue_light">#9CB4CC</color>
+    <color name="bleu_light">#748DA6</color>
+
+    #dark
+    <color name="pink_dark">#E94560</color>
+    <color name="purple_dark">#533483</color>
+    <color name="blue_dark">#0F3460</color>
+    <color name="bleu_dark">#16213E</color>
 </resources>

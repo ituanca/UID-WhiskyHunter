@@ -5,6 +5,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
     <TextView
+        android:id="@+id/title_add_distillery"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20sp"
@@ -12,8 +13,7 @@
         android:textStyle="bold"
         android:gravity="center_vertical|center"
         android:layout_marginHorizontal="50dp"
-        android:layout_marginVertical="20dp"
-        android:text="@string/add_item"/>
+        android:layout_marginVertical="20dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,17 +22,18 @@
         android:gravity="center_vertical|start">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="10dp"
+            android:layout_marginHorizontal="20dp"
             android:orientation="horizontal">
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/distilleries_info_item_name"/>
             <EditText
                 android:id="@+id/add_item_name"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight=".70"
                 android:layout_height="wrap_content"
                 android:textSize="15sp" />
         </LinearLayout>
@@ -44,16 +45,17 @@
             android:id="@+id/name_error"/>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="10dp"
+            android:layout_marginHorizontal="20dp"
             android:orientation="horizontal">
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/distilleries_info_item_country"/>
             <EditText
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight=".70"
                 android:layout_height="wrap_content"
                 android:textSize="15sp"
                 android:id="@+id/add_item_country"/>
@@ -66,16 +68,17 @@
             android:id="@+id/country_error"/>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="10dp"
+            android:layout_marginHorizontal="20dp"
             android:orientation="horizontal">
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/distilleries_info_item_whiskybase_whiskies"/>
             <EditText
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight=".70"
                 android:layout_height="wrap_content"
                 android:textSize="15sp"
                 android:id="@+id/add_item_whiskybase_whiskies"/>
@@ -88,16 +91,17 @@
             android:id="@+id/whiskybase_whiskies_error"/>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="10dp"
+            android:layout_marginHorizontal="20dp"
             android:orientation="horizontal">
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/distilleries_info_item_whiskybase_votes"/>
             <EditText
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight=".70"
                 android:layout_height="wrap_content"
                 android:textSize="15sp"
                 android:id="@+id/add_item_whiskybase_votes"/>
@@ -110,16 +114,17 @@
             android:id="@+id/whiskybase_votes_error"/>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="10dp"
+            android:layout_marginHorizontal="20dp"
             android:orientation="horizontal">
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/distilleries_info_item_whiskybase_rating"/>
             <EditText
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight=".70"
                 android:layout_height="wrap_content"
                 android:textSize="15sp"
                 android:id="@+id/add_item_whiskybase_rating"/>

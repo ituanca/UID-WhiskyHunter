@@ -86,7 +86,6 @@ class DistilleriesInfoViewAdapter(
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         if (requestCode == 0) {
             if (resultCode == Activity.RESULT_OK) {
-                //val addedDistilleries = data!!.getStringArrayListExtra("addedDistilleries")
                 val addedDistillery = data!!.getSerializableExtra("addedDistillery")
                 val placeOfInsertion = data.getStringExtra("placeOfInsertion")
                 Log.e("RECEIVED", addedDistillery.toString())

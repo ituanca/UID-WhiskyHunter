@@ -5,7 +5,6 @@ import android.app.Activity
 import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
@@ -16,15 +15,24 @@ import com.example.whiskyhunter.models.DistilleriesInfo
 class AddDistilleryActivity : AppCompatActivity() {
 
     lateinit var adapter : DistilleriesInfoViewAdapter
-    private var addedDistilleries : ArrayList<DistilleriesInfo> = ArrayList()
 
-    @SuppressLint("MissingInflatedId")
+    @SuppressLint("MissingInflatedId", "SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_distillery)
         adapter = DistilleriesInfoViewAdapter(this, ArrayList())
+
+        val placeOfInsertion = intent.getStringExtra("placeOfInsertion")
+        if(placeOfInsertion == "at_the_beginning"){
+            findViewById<TextView>(R.id.title_add_distillery).text =
+                "Add a new distillery at the beginning of the list"
+        }else if(placeOfInsertion == "at_the_end"){
+            findViewById<TextView>(R.id.title_add_distillery).text =
+                "Add a new distillery at the end of the list"
+        }
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onBackPressed() {
         val name = findViewById<EditText>(R.id.add_item_name).text.toString()
         val country = findViewById<EditText>(R.id.add_item_country).text.toString()
